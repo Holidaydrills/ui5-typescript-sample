@@ -7,7 +7,10 @@
     "dev": "ngpui serve screen -p 3000 -f --dep --ar",
     "build": "ngpui build screen",
     "test": "ngpui test screen --ci",
-    "test-local": "ngpui test screen"
+    "test-local": "ngpui test screen",
+    "compile": "tsc",
+    "build-ui": "rimraf dist && tsc --build tsconfig.json && ui5 build --a",
+    "start-compiled": "ui5 serve --accept-remote-connections true -o index.html"
   },
   "config": {
     "ngp_project_type": "screen"
@@ -25,14 +28,17 @@
     "@sap-payroll/ui-cli": "^1.9.1",
     "@sap-payroll/ui5-middleware-namespacereplacer": "^1.1.2",
     "@sap-payroll/ui5-task-namespacereplacer": "^1.0.4",
-    "@ui5/cli": "^2.7.1",
+    "@openui5/ts-types": "^1.65.1",
+    "@ui5/cli": "^2.10.4",
     "karma": "^5.2.3",
     "karma-chrome-launcher": "^3.1.0",
     "karma-cli": "^2.0.0",
     "karma-coverage": "^2.0.2",
     "karma-ui5": "^2.3.2",
     "karma-webdriver-launcher": "^1.0.8",
+    "rimraf": "^3.0.2",
     "sinon": "^9.2.3",
+    "typescript": "^3.7.4",
     "ui5-middleware-livereload": "^0.5.4",
     "ui5-middleware-simpleproxy": "^0.3.1"
   },
@@ -45,5 +51,6 @@
       "sinon",
       "@sap-payroll/mockserver"
     ]
-  }
+  },
+  "dependencies": {}
 }
