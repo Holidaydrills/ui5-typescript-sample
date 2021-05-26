@@ -2,6 +2,8 @@
 .env 
 node_modules
 dist
+**.js
+**.map
 # Created by https://www.toptal.com/developers/gitignore/api/osx,visualstudiocode,intellij+all,windows,vim,zsh
 # Edit at https://www.toptal.com/developers/gitignore?templates=osx,visualstudiocode,intellij+all,windows,vim,zsh
 
