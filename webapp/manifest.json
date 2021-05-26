@@ -1,0 +1,122 @@
+{
+  "_version": "1.21.0",
+  "sap.app": {
+    "id": "com.sap.kt.typescript.sample",
+    "type": "application",
+    "title": "",
+    "description": "",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "i18n": {
+      "bundleName": "com.sap.kt.typescript.sample.i18n.i18n",
+      "supportedLocales": ["en"],
+      "fallbackLocale": "en"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/api-gateway/Payroll/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0",
+          "localUri": "localService/metadata.xml"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "sap-icon://task"
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "com.sap.kt.typescript.sample.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.76.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.sap.kt.typescript.sample.i18n.i18n",
+          "supportedLocales": ["en"],
+          "fallbackLocale": "en"
+        }
+      },
+      "odata": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "groupId": "$direct",
+          "autoExpandSelect": false
+        }
+      },
+      "viewModel": {
+        "type": "sap.ui.model.json.JSONModel"
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "com.sap.kt.typescript.sample.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "transition": "slide",
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "typelessWorld",
+          "target": "typelessWorld"
+        },
+        {
+          "pattern": "typeScriptWorld",
+          "name": "typeScriptWorld",
+          "target": "typeScriptWorld"
+        }
+      ],
+      "targets": {
+        "typelessWorld": {
+          "viewId": "typelessWorldView",
+          "viewName": "TypelessWorld",
+          "viewLevel": 1
+        },
+        "typeScriptWorld": {
+          "viewId": "typeScriptWorldView",
+          "viewName": "TypeScriptWorld",
+          "viewLevel": 1
+        }
+      }
+    }
+  }
+}

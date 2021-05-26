@@ -1,0 +1,12 @@
+<mvc:View
+	controllerName="com.sap.kt.typescript.sample.controller.TypeScriptWorld"
+    height="100%"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+
+    <Title id="fancyLabel" text="Generated UI Screen" />
+	<Button id="fancyButton" text="Push the button" press="onButtonPress"/>
+	<Button id="navigationButton" text="Bring me back to the typeless world" press="onNavigateToTypelessWorld"/>
+    
+</mvc:View>
