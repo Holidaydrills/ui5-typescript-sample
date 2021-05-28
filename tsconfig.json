@@ -4,5 +4,5 @@
         "types": ["@openui5/ts-types"],
         "sourceMap": true
     },
-    "include": ["./webapp/**/*"]
+    "include": ["./webapp/**/*", "./customTypes/**/*"]
 }

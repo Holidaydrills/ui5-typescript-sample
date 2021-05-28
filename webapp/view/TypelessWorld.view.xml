@@ -6,8 +6,8 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	id="typelessWorldView">
 
-    <Title id="fancyLabel" text="Generated UI Screen" />
+    <Title id="fancyLabel" text="Initial Title" />
 	<Button id="fancyButton" text="Push the button" press="onButtonPress"/>
-	<Button id="navigationButton" text="Bring me to the typed world" press="onNavigateToTypeScriptWorld"/>
+	<Button id="navigationButton" text="Bring me to View 2" press="onNavigateToTypeScriptWorld"/>
     
 </mvc:View>

@@ -11,7 +11,6 @@ sap.ui.define([
 			super("com.sap.kt.typescript.sample.controller.TypeScriptWorld");
 		}
 		public onInit(): void {
-			alert("This comes from a typescript controller");
 		}
 
 		onNavigateToTypelessWorld(): void {
@@ -20,18 +19,5 @@ sap.ui.define([
 			uiComponent.getRouter().navTo("typelessWorld");
 		}
 	}
-
-
-	// return Controller.extend("com.sap.kt.typescript.sample.controller.TypeScriptWorld", {
-
-	// 	onButtonPress: function() {
-	// 		const label = this.getView().byId("fancyLabel");
-	// 		label.setText("Somthing changed here");
-	// 	},
-
-	// 	onNavigateToTypelessWorld: function() {
-	// 		this.getOwnerComponent().getRouter().navTo("typelessWorld");
-	// 	}
-	// });
 
 });
